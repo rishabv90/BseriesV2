@@ -24,4 +24,10 @@ D) Validate Apache functionality
 1) sudo systemctl status apache2
 2) Paste the public Ip of the VM in the browser to validate server running
 
-E) 
+E) Download website files in the VM in the apache directory
+1) git clone https://github.com/rishabv90/BseriesV2.git - or any other files you have (git is already installed)
+2) Remove Apache homepage - sudo rm /var/www/html/index.html
+3) Copy current html files to the apache directory = sudo cp -r * /var/www/html/
+4) Restart the Apache server - sudo systemctl restart apache2
+5) Check the status of server - sudo systemctl status apache2
+6) Refresh the Ip address website to see HTML file 
